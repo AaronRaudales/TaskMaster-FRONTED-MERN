@@ -12,7 +12,7 @@ dist
 dist-ssr
 *.local
 .env
-.eslintrc.cjs
+*.eslintrc.cjs
 
 # Editor directories and files
 .vscode/*
