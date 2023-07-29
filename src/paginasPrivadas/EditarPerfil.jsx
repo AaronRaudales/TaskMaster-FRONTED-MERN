@@ -60,7 +60,7 @@ const Perfil = () => {
                     <div className="my-3">
                       <label className="uppercase font-bold text-gray-600">Telefono</label>
                       <input 
-                        type="tel  "
+                        type="tel"
                         name="telefono"
                         className="border bg-gray-50 w-full p-2 mt-4 rounded-lg outline-gray-300"
                         value={perfil.telefono || ''} 
