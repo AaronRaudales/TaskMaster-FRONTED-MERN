@@ -82,7 +82,7 @@ const FormularioTareas = () => {
                 type="text"
                 id="titulo"
                 placeholder="Titulo"
-                className="border-2 w-full p-2 mt-2 placeholder-gray-400 outline-gray-300 rounded-md"
+                className="border-2 w-full p-2 mt-2 placeholder-gray-400 focus:outline-none focus:shadow-none rounded-md"
                 value={titulo}
                 onChange={e =>  setTitulo(e.target.value)}
             />
@@ -93,7 +93,7 @@ const FormularioTareas = () => {
                 type="text"
                 id="descripcion"
                 placeholder="Descripcion de la tarea"
-                className="border-2 w-full p-2 mt-2 placeholder-gray-400 outline-gray-300 rounded-md"
+                className="border-2 w-full p-2 mt-2 placeholder-gray-400 focus:outline-none focus:shadow-none rounded-md"
                 value={descripcion}
                 onChange={ e =>  setDescripcion(e.target.value)}
             />
@@ -107,7 +107,7 @@ const FormularioTareas = () => {
             <div key={index} className="mb-2">
               <input
                 type="text"
-                className="border-2 w-full p-2 placeholder-gray-400 outline-gray-300 rounded-md"
+                className="border-2 w-full p-2 placeholder-gray-400 focus:outline-none focus:shadow-none rounded-md"
                 value={asignacion}
                 onChange={(e) => {
                   const updatedAsignaciones = [...asignaciones];
@@ -121,7 +121,7 @@ const FormularioTareas = () => {
             <input
               id="asignacion"
               placeholder="Asignaciones a administrar"
-              className="border-2 w-full p-2 mt-2 placeholder-gray-400 outline-gray-300 rounded-md"
+              className="border-2 w-full p-2 mt-2 placeholder-gray-400 focus:outline-none focus:shadow-none rounded-md"
               value={asignacion}
               onChange={(e) => setAsignacion(e.target.value)}
             />
@@ -151,7 +151,7 @@ const FormularioTareas = () => {
             <input 
                 type="date"
                 id="fechaFinalizacion"
-                className="border-2 w-full p-2 mt-2 placeholder-gray-400 outline-gray-300 rounded-md"
+                className="border-2 w-full p-2 mt-2 placeholder-gray-400 focus:outline-none focus:shadow-none rounded-md"
                 value={fechaFinalizacion}
                 onChange={e =>  setFechaFinalizacion(e.target.value)}
             />
@@ -161,7 +161,7 @@ const FormularioTareas = () => {
             <input 
                 type="time"
                 id="horaFinalizacion"
-                className="border-2 w-full p-2 mt-2 placeholder-gray-400 outline-gray-300 rounded-md"
+                className="border-2 w-full p-2 mt-2 placeholder-gray-400 focus:outline-none focus:shadow-none rounded-md"
                 value={horaFinalizacion}
                 onChange={e =>  setHoraFinalizacion(e.target.value)}
             />
