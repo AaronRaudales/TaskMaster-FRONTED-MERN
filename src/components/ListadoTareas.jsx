@@ -26,7 +26,7 @@ const ListadoTareas = () => {
       ) : (
         <>
           <h2 className="font-black text-2xl text-center md:mt-5">Aun no tiene Tareas</h2>
-          <p className="text-center mb-10 text-lg mt-4 mx-2 md:mx-0">Comienza agregando Tareas {''} 
+          <p className="text-center mb-10 text-lg mt-4 mx-5 md:mx-0">Comienza agregando Tareas {''} 
             <span className="font-bold text-sky-700">y apareceran en este lugar</span>
           </p>
         </>
