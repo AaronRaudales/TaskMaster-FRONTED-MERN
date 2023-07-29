@@ -44,7 +44,7 @@ const Login = () => {
             <h1 className="text-white font-semibold text-2xl pt-20 pb-10 px-10">Administra tus actividades con nosotros. 
             </h1>
             <p className="text-white text-sm px-10 font-normal">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Tu solución intuitiva para gestionar tareas eficientemente. 
             </p>
 
         </div>
