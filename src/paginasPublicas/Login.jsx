@@ -61,7 +61,7 @@ const Login = () => {
                         type="email"
                         placeholder="Correo electronico"
                         autoComplete='username'
-                        className="border w-full p-3 mt-3 bg-white rounded-lg font-normal outline-gray-300"
+                        className="border w-full p-3 mt-3 bg-white rounded-lg font-normal focus:outline-gray-300"
                         value={email}
                         onChange={ e => setEmail(e.target.value)}
                     />
@@ -73,7 +73,7 @@ const Login = () => {
                         type={mostrarPassword ? "text" : "password"}
                         placeholder="Contraseña"
                         autoComplete="current-password"
-                        className="border w-full p-3 mt-3 bg-white rounded-lg font-normal outline-gray-300"
+                        className="border w-full p-3 mt-3 bg-white rounded-lg font-normal focus:outline-gray-300"
                         value={password}
                         onChange={e => setPassword(e.target.value)}
                         />
