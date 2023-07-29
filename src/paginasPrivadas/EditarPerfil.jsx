@@ -49,7 +49,7 @@ const Perfil = () => {
                       <input 
                         type="text"
                         name="nombre"
-                        className="border bg-gray-50 w-full p-2 mt-4 rounded-lg outline-gray-300"
+                        className="border bg-gray-50 w-full p-2 mt-4 rounded-lg focus:outline-none focus:shadow-none"
                         value={perfil.nombre || ''} 
                         onChange={ e => setPerfil({
                           ...perfil,
@@ -62,7 +62,7 @@ const Perfil = () => {
                       <input 
                         type="tel"
                         name="telefono"
-                        className="border bg-gray-50 w-full p-2 mt-4 rounded-lg outline-gray-300"
+                        className="border bg-gray-50 w-full p-2 mt-4 rounded-lg focus:outline-none focus:shadow-none"
                         value={perfil.telefono || ''} 
                         onChange={ e => setPerfil({
                           ...perfil,
@@ -75,7 +75,7 @@ const Perfil = () => {
                       <input 
                         type="email"
                         name="email"
-                        className="border bg-gray-50 w-full p-2 mt-4 rounded-lg outline-gray-300"
+                        className="border bg-gray-50 w-full p-2 mt-4 rounded-lg focus:outline-none focus:shadow-none"
                         value={perfil.email || ''} 
                         onChange={ e => setPerfil({
                           ...perfil,

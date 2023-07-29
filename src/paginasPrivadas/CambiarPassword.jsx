@@ -60,7 +60,7 @@ const CambiarPassword = () => {
                         <input 
                           type={mostrarPasswordActual ? "text" : "password"}
                           placeholder="Escribe tu contraseña actual"
-                          className="border bg-gray-50 w-full p-2 mt-4 rounded-lg outline-gray-300"
+                          className="border bg-gray-50 w-full p-2 mt-4 rounded-lg focus:outline-none focus:shadow-none"
                           name="password_actual"
                           value={password.password_actual}
                           onChange={e=> setPassword({
@@ -86,7 +86,7 @@ const CambiarPassword = () => {
                           <input 
                             type={mostrarPasswordNuevo ? "text" : "password"}
                             placeholder="Escribe tu nueva contraseña"
-                            className="border bg-gray-50 w-full p-2 mt-4 rounded-lg outline-gray-300"
+                            className="border bg-gray-50 w-full p-2 mt-4 rounded-lg focus:outline-none focus:shadow-none"
                             name="password_nuevo"
                             value={password.password_nuevo}
                             onChange={e=> setPassword({
