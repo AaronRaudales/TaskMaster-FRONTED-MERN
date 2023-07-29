@@ -11,6 +11,7 @@ import clienteAxios from '../config/axios';
 const Login = () => {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
+    const [mostrarPassword, setMostrarPassword] = useState(false)// muestra el password que esta oculto
 
     const { setAuth} = useAuth()
 
@@ -65,17 +66,30 @@ const Login = () => {
                         onChange={ e => setEmail(e.target.value)}
                     />
                 </div>
-                <div className="my-5">
-                    <label className="text-gray-600 block text-base font-semibold" >Contraseña</label>
-                    <input 
-                        type="password"
+                <div className="my-5 flex items-center"> {/* Utilizamos 'items-center' para centrar verticalmente los elementos */}
+                    <div className="flex-grow"> {/* Utilizamos 'flex-grow' para que el input ocupe todo el ancho disponible */}
+                        <label className="text-gray-600 block text-base font-semibold">Contraseña</label>
+                        <input 
+                        type={mostrarPassword ? "text" : "password"}
                         placeholder="Contraseña"
                         autoComplete="current-password"
                         className="border w-full p-3 mt-3 bg-white rounded-lg font-normal outline-gray-300"
                         value={password}
-                        onChange={ e => setPassword(e.target.value)}
-                    />
+                        onChange={e => setPassword(e.target.value)}
+                        />
+                    </div>
+                    <div 
+                        className="cursor-pointer ml-2 mt-10" 
+                        onClick={() => setMostrarPassword(!mostrarPassword)}
+                    > {/* Ajustamos el margen izquierdo para separar el icono del input */}
+                        {mostrarPassword ? (
+                        <i className="bx bxs-show bx-sm"></i>
+                        ) : (
+                        <i className="bx bxs-low-vision bx-sm"></i>
+                        )}
+                    </div>
                 </div>
+
                 <nav className='md:flex md:justify-between'>
                     <Link
                         className='block text-sm text-center text-sky-800 font-semibold mt-10 md:my-5'
