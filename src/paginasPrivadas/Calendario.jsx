@@ -24,7 +24,7 @@ const Calendario = () => {
 
   return (
     <div className="flex md:justify-center h-screen">
-      <div className="container pt-28 w-full md:w-3/4  z-0"> {/* Ajustamos el ancho del calendario */}
+      <div className="container pt-28 w-full md:w-3/4 z-0"> {/* Ajustamos el ancho del calendario */}
         <FullCalendar
           plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
           initialView="dayGridMonth"

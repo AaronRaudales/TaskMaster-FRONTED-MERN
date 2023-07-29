@@ -49,7 +49,7 @@ const CambiarPassword = () => {
         <NavegacionSettings />
         <h2 className="text-2xl m-5 text-center font-bold text-sky-700">Cambiar Contraseña</h2>
         <div className="flex justify-center m-3 md:m-0">
-            <div className="w-full md:w-1/2 bg-white rounded-lg p-5">
+            <div className="w-full md:w-1/2 bg-white rounded-lg p-5 mb-10 md:mb-0 shadow-md">
             <Alerta />
                 <form 
                     onSubmit={handleSubmit}
