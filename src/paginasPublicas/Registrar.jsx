@@ -56,7 +56,7 @@ const Registrar = () => {
                   <input 
                       type="text"
                       placeholder="Nombre Completo"
-                      className="border w-full p-3 mt-3 bg-white rounded-lg font-normal outline-gray-300"
+                      className="border w-full p-3 mt-3 bg-white rounded-lg font-normal focus:outline-none focus:shadow-none"
                       value={nombre}
                       onChange={ e => setNombre(e.target.value)}
                   />
@@ -66,7 +66,7 @@ const Registrar = () => {
                   <input 
                       type="email"
                       placeholder="Correo Electronico"
-                      className="border w-full p-3 mt-3 bg-white rounded-lg font-normal outline-gray-300"
+                      className="border w-full p-3 mt-3 bg-white rounded-lg font-normal focus:outline-none focus:shadow-none"
                       value={email}
                       onChange={ e => setEmail(e.target.value)}
                   />
@@ -76,7 +76,7 @@ const Registrar = () => {
                   <input 
                       type="password"
                       placeholder="Contraseña"
-                      className="border w-full p-3 mt-3 bg-white rounded-lg font-normal outline-gray-300"
+                      className="border w-full p-3 mt-3 bg-white rounded-lg font-normal focus:outline-none focus:shadow-none"
                       value={password}
                       onChange={ e => setPassword(e.target.value)}
                   />
@@ -86,7 +86,7 @@ const Registrar = () => {
                   <input 
                       type="password"
                       placeholder="Confirma tu contraseña"
-                      className="border w-full p-3 mt-3 bg-white rounded-lg font-normal outline-gray-300"
+                      className="border w-full p-3 mt-3 bg-white rounded-lg font-normal focus:outline-none focus:shadow-none"
                       value={repetirPassword}
                       onChange={ e => setRepetirPassword(e.target.value)}
                   />
