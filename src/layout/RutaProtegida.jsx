@@ -11,7 +11,7 @@ const RutaProtegida = () => {
 
       {/* Un div para que en tamaño sm tenga un fondo gris */}
       <div className="bg-gray-100">
-            <Sidebar/>
+            {/*<Sidebar/>/*}
             {/* Verifica que el usuario este autenticado  */}
             {auth?._id ? (
                 <main>

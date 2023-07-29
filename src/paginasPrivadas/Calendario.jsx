@@ -22,13 +22,6 @@ const Calendario = () => {
     }
   }, [tareas]);
 
-  // useEffect(() => {
-  //   // Obtén las tareas si es necesario cuando el componente se monta
-  //   if (!tareas || tareas.length === 0) {
-  //     fetchTareas();
-  //   }
-  // }, [tareas, fetchTareas]);
-
   return (
     <div className="flex md:justify-center h-screen">
       <div className="container pt-28 w-full md:w-3/4  z-0"> {/* Ajustamos el ancho del calendario */}
