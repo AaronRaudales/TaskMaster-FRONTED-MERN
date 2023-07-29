@@ -35,8 +35,21 @@ const Login = () => {
         } catch (error) {
             toast.error(error.response.data.msg)
         }
+    };
 
-    }
+    // Almacenar y obtener el estado de mostrarPassword en localStorage
+    useEffect(() => {
+        const storedShowPassword = localStorage.getItem("showPassword");
+        if (storedShowPassword) {
+        setMostrarPassword(JSON.parse(storedShowPassword));
+        }
+    }, []);
+
+    useEffect(() => {
+        localStorage.setItem("showPassword", JSON.stringify(mostrarPassword));
+    }, [mostrarPassword]);
+
+
 
   return (
    <>
