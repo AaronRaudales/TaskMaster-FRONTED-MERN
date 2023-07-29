@@ -56,7 +56,7 @@ const Tarea = ({tarea}) => {
       const intervalo = setInterval(calcularTiempoRestante, 1000);
   
       // Limpiar el intervalo cuando el componente se desmonte
-      return () => clearInterval(intervalo);
+      clearInterval(intervalo);
   }, [fechaFinalizacion, horaFinalizacion]);
   
   return (

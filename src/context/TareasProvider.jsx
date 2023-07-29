@@ -33,7 +33,7 @@ const TareasProvider = ({children}) => {
           console.log(error)
         }
       }
-      return() => obtenerTareas()
+      obtenerTareas()
     }, [auth])
 
     const guardarTarea = async(tarea)=> {

@@ -41,7 +41,7 @@ const AuthProvider = ({children}) => {
             }
             setCargando(false)
         }
-        return() => autenticarUsuario();
+        autenticarUsuario();
     }, [])
 
     if (cargando) {

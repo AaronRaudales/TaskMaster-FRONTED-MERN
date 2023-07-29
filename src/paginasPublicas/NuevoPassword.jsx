@@ -25,7 +25,7 @@ const NuevoPassword = () => {
         toast.error('Ha ocurrido un error. Por favor, acceda al enlace que le hemos enviado para poder cambiar su contraseña.')
       }
     }
-    return() => confirmarToken()
+    confirmarToken()
   },[])
 
   const handleSubmit = async e => {
