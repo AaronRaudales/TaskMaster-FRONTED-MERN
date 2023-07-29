@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import {Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-hot-toast';
 import useAuth from '../hooks/useAuth';
@@ -36,18 +36,6 @@ const Login = () => {
             toast.error(error.response.data.msg)
         }
     };
-
-    // // Almacenar y obtener el estado de mostrarPassword en localStorage
-    // useEffect(() => {
-    //     const storedShowPassword = localStorage.getItem("showPassword");
-    //     if (storedShowPassword) {
-    //     setMostrarPassword(JSON.parse(storedShowPassword));
-    //     }
-    // }, []);
-
-    // useEffect(() => {
-    //     localStorage.setItem("showPassword", JSON.stringify(mostrarPassword));
-    // }, [mostrarPassword]);
 
   return (
    <>
@@ -116,7 +104,6 @@ const Login = () => {
                     type="submit"
                     value="Iniciar Sesion"
                     className="bg-sky-800 text-white w-full py-3 rounded-xl font-bold mt-10 md:mt-5 hover:cursor-pointer md:w-auto px-10 mb-10"
-
                 />
             </form>
         </div>
