@@ -25,8 +25,7 @@ const Tarea = ({tarea}) => {
       const calcularTiempoRestante = () => {
         const fechaHoraFinalizacion = new Date(fechaFinalizacion);
         const [hora, minutos] = horaFinalizacion.split(":");
-        fechaHoraFinalizacion.setUTCHours(hora);
-        fechaHoraFinalizacion.setUTCMinutes(minutos);
+        fechaHoraFinalizacion.setHours(hora, minutos, 0, 0); // Ajustar hora y minutos correctamente
         const ahora = new Date();
   
         if (isNaN(fechaHoraFinalizacion.getTime())) {
@@ -56,7 +55,9 @@ const Tarea = ({tarea}) => {
       const intervalo = setInterval(calcularTiempoRestante, 1000);
   
       // Limpiar el intervalo cuando el componente se desmonte
-      clearInterval(intervalo);
+      return () => {
+        clearInterval(intervalo);
+      };
   }, [fechaFinalizacion, horaFinalizacion]);
   
   return (
