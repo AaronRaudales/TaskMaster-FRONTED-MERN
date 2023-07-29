@@ -28,6 +28,7 @@ const Perfil = () => {
       const usuarioActualizado = await actualizarPerfil(perfil)
       if(usuarioActualizado.success === true){
         toast.success(usuarioActualizado.message)
+        setPerfil(usuarioActualizado); // Agregar esta línea para actualizar el estado perfil con los nuevos datos
       } else {
         toast.error(usuarioActualizado.message)
       }
