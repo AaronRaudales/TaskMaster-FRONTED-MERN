@@ -73,7 +73,7 @@ const Login = () => {
                         type={mostrarPassword ? "text" : "password"}
                         placeholder="Contraseña"
                         autoComplete="current-password"
-                        className="border-gray-300 w-full p-3 mt-3 bg-white rounded-lg font-normal outline-gray-300"
+                        className="border w-full p-3 mt-3 bg-white rounded-lg font-normal outline-gray-300"
                         value={password}
                         onChange={e => setPassword(e.target.value)}
                         />
