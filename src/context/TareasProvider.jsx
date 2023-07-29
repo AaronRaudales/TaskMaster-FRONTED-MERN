@@ -91,7 +91,7 @@ const TareasProvider = ({children}) => {
 
         deleteConfirmation({
             title: '',
-            text: '¿Confirmas que deseas eliminar el Paciente? ',
+            text: '¿Confirmas que deseas eliminar la Tarea? ',
             confirmButtonText: 'CONFIRMAR',
             onDelete: handleDeleteConfirmation
         });
