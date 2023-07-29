@@ -61,7 +61,7 @@ const Login = () => {
                         type="email"
                         placeholder="Correo electronico"
                         autoComplete='username'
-                        className="border w-full p-3 mt-3 bg-white rounded-lg font-normal focus:outline-none focus:shadow-none"
+                        className="border w-full p-3 mt-3 bg-white rounded-lg font-normal focus:outline-gray-300 focus:shadow-none"
                         value={email}
                         onChange={ e => setEmail(e.target.value)}
                     />
