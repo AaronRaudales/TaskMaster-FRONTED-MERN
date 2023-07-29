@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import useAuth from '../hooks/useAuth';
 
@@ -7,6 +7,8 @@ import '../Estilos/style.css';
 const Sidebar = () => {
   const { cerrarSesion } = useAuth();
   const navBarRef = useRef(null);
+
+  const [sidebarVisible, setSidebarVisible] = useState(false);
 
   useEffect(() => {
     const menuLateral = () => {
@@ -55,52 +57,57 @@ const Sidebar = () => {
     };
 
     return () => menuLateral();
+    setSidebarVisible(true);
   }, []);
 
   return (
     <>
-      <nav ref={navBarRef} className='navegacion z-10'>
-        <div className='logo'>
-          <i className='bx bx-menu menu-icon'></i>
-          <span className='logo-name'>TaskMaster</span>
-        </div>
-        <div className='sidebar'>
-          <div className='logo'>
-            <i className='bx bx-menu menu-icon'></i>
-            <span className='logo-name'>TaskMaster</span>
-          </div>
-
-          <div className='sidebar-content'>
-            <ul className='lists'>
-              <li className='list'>
-                <Link className='nav-link' to='/admin'>
-                  <i className='bx bx-home-alt icon'></i>
-                  <span className='link'>Dashboard</span>
-                </Link>
-              </li>
-              <li className='list'>
-                <Link className='nav-link' to='/admin/calendario'>
-                  <i className='bx bxs-calendar icon'></i>
-                  <span className='link'>Calendar</span>
-                </Link>
-              </li>
-            </ul>
-            <div className='bottom-cotent'>
-              <li className='list'>
-                <Link className='nav-link' to='/admin/perfil'>
-                  <i className='bx bx-cog icon'></i>
-                  <span className='link'>Settings</span>
-                </Link>
-              </li>
-              <li className='list'>
-                <Link className='nav-link' to='' onClick={cerrarSesion}>
-                  <i className='bx bx-log-out icon'></i>
-                  <span className='link'>Logout</span>
-                </Link>
-              </li>
+      <nav ref={navBarRef} className={`navegacion z-10 ${sidebarVisible ? 'open' : ''}`}>
+        {
+          <>
+            <div className='logo'>
+              <i className='bx bx-menu menu-icon'></i>
+              <span className='logo-name'>TaskMaster</span>
             </div>
-          </div>
-        </div>
+            <div className='sidebar'>
+              <div className='logo'>
+                <i className='bx bx-menu menu-icon'></i>
+                <span className='logo-name'>TaskMaster</span>
+              </div>
+
+              <div className='sidebar-content'>
+                <ul className='lists'>
+                  <li className='list'>
+                    <Link className='nav-link' to='/admin'>
+                      <i className='bx bx-home-alt icon'></i>
+                      <span className='link'>Dashboard</span>
+                    </Link>
+                  </li>
+                  <li className='list'>
+                    <Link className='nav-link' to='/admin/calendario'>
+                      <i className='bx bxs-calendar icon'></i>
+                      <span className='link'>Calendar</span>
+                    </Link>
+                  </li>
+                </ul>
+                <div className='bottom-cotent'>
+                  <li className='list'>
+                    <Link className='nav-link' to='/admin/perfil'>
+                      <i className='bx bx-cog icon'></i>
+                      <span className='link'>Settings</span>
+                    </Link>
+                  </li>
+                  <li className='list'>
+                    <Link className='nav-link' to='' onClick={cerrarSesion}>
+                      <i className='bx bx-log-out icon'></i>
+                      <span className='link'>Logout</span>
+                    </Link>
+                  </li>
+                </div>
+              </div>
+            </div>
+          </>
+        }
       </nav>
 
       <section className='overlay'></section>
