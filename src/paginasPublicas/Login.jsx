@@ -37,19 +37,17 @@ const Login = () => {
         }
     };
 
-    // Almacenar y obtener el estado de mostrarPassword en localStorage
-    useEffect(() => {
-        const storedShowPassword = localStorage.getItem("showPassword");
-        if (storedShowPassword) {
-        setMostrarPassword(JSON.parse(storedShowPassword));
-        }
-    }, []);
+    // // Almacenar y obtener el estado de mostrarPassword en localStorage
+    // useEffect(() => {
+    //     const storedShowPassword = localStorage.getItem("showPassword");
+    //     if (storedShowPassword) {
+    //     setMostrarPassword(JSON.parse(storedShowPassword));
+    //     }
+    // }, []);
 
-    useEffect(() => {
-        localStorage.setItem("showPassword", JSON.stringify(mostrarPassword));
-    }, [mostrarPassword]);
-
-
+    // useEffect(() => {
+    //     localStorage.setItem("showPassword", JSON.stringify(mostrarPassword));
+    // }, [mostrarPassword]);
 
   return (
    <>
@@ -106,11 +104,11 @@ const Login = () => {
                 <nav className='md:flex md:justify-between'>
                     <Link
                         className='block text-sm text-center text-sky-800 font-semibold mt-10 md:my-5'
-                        to="/forgot-password"><span className='hover:border-b hover:border-sky-800'>Forgot Password?</span>
+                        to="/forgot-password"><span className='hover:border-b hover:border-sky-800'>Has olvidado tu contraseña?</span>
                     </Link>
                     <Link
                         className='block text-sm text-center my-5 text-gray-600 font-normal'
-                        to="/registrar">Are you new User? <span className='text-sky-800 font-semibold hover:border-b hover:border-sky-800'>Sign up</span>
+                        to="/registrar">Eres un nuevo usuario? <span className='text-sky-800 font-semibold hover:border-b hover:border-sky-800'>Registrate</span>
                         
                     </Link>
                 </nav>

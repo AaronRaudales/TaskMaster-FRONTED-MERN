@@ -75,13 +75,13 @@ const Sidebar = () => {
               <li className='list'>
                 <Link className='nav-link' to='/admin'>
                   <i className='bx bx-home-alt icon'></i>
-                  <span className='link'>Dashboard</span>
+                  <span className='link'>Inicio</span>
                 </Link>
               </li>
               <li className='list'>
                 <Link className='nav-link' to='/admin/calendario'>
                   <i className='bx bxs-calendar icon'></i>
-                  <span className='link'>Calendar</span>
+                  <span className='link'>Calendario</span>
                 </Link>
               </li>
             </ul>
@@ -89,13 +89,13 @@ const Sidebar = () => {
               <li className='list'>
                 <Link className='nav-link' to='/admin/perfil'>
                   <i className='bx bx-cog icon'></i>
-                  <span className='link'>Settings</span>
+                  <span className='link'>Perfil</span>
                 </Link>
               </li>
               <li className='list'>
                 <Link className='nav-link' to='' onClick={cerrarSesion}>
                   <i className='bx bx-log-out icon'></i>
-                  <span className='link'>Logout</span>
+                  <span className='link'>Cerrar Sesion</span>
                 </Link>
               </li>
             </div>
