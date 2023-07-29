@@ -31,7 +31,7 @@ const Calendario = () => {
           headerToolbar={{
             start: "prev,next",
             center: "title",
-            end: "dayGridMonth, timeGridWeek"
+            end: "dayGridMonth"
           }}
           height={"90vh"}
           events={events}
