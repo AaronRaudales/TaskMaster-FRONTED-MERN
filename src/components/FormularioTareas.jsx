@@ -161,7 +161,7 @@ const FormularioTareas = () => {
             <input 
                 type="time"
                 id="horaFinalizacion"
-                className="border-2 w-full p-2 mt-2 placeholder-gray-400 focus:outline-none focus:shadow-none rounded-md"
+                className="border-2 w-full p-2 mt-2 placeholder-gray-400 focus:outline-none focus:shadow-none rounded-md ml-5 md:ml-0"
                 value={horaFinalizacion}
                 onChange={e =>  setHoraFinalizacion(e.target.value)}
             />
