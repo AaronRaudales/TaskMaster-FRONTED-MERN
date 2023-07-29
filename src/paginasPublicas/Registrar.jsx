@@ -9,6 +9,8 @@ const Registrar = () => {
   const [email, setEmail ] = useState('')
   const [password, setPassword ] = useState('')
   const [repetirPassword, setRepetirPassword ] = useState('')
+  const [mostrarPassword, setMostrarPassword] = useState(false)// muestra el password que esta oculto
+  const [mostrarConfirmarPassword, setMostrarConfirmarPassword] = useState(false)
 
   const handleSubmit = async e => {
     e.preventDefault();
@@ -71,25 +73,49 @@ const Registrar = () => {
                       onChange={ e => setEmail(e.target.value)}
                   />
               </div>
-              <div className="my-5">
-                <label className="text-gray-600 block text-base font-semibold">Contraseña</label>
-                  <input 
-                      type="password"
-                      placeholder="Contraseña"
-                      className="border w-full p-3 mt-3 bg-white rounded-lg font-normal focus:outline-none focus:shadow-none"
-                      value={password}
-                      onChange={ e => setPassword(e.target.value)}
-                  />
+              <div className="my-5 flex items-center">
+                  <div className="flex-grow">
+                    <label className="text-gray-600 block text-base font-semibold">Contraseña</label>
+                      <input 
+                          type="password"
+                          placeholder="Contraseña"
+                          className="border w-full p-3 mt-3 bg-white rounded-lg font-normal focus:outline-none focus:shadow-none"
+                          value={password}
+                          onChange={ e => setPassword(e.target.value)}
+                      />
+                  </div>
+                  <div 
+                          className="cursor-pointer ml-2 mt-10" 
+                          onClick={() => setMostrarPassword(!mostrarPassword)}
+                      > {/* Ajustamos el margen izquierdo para separar el icono del input */}
+                          {mostrarPassword ? (
+                          <i className="bx bxs-show bx-sm"></i>
+                          ) : (
+                          <i className="bx bxs-low-vision bx-sm"></i>
+                          )}
+                  </div>
               </div>
-              <div className="my-5">
-                <label className="text-gray-600 block text-base font-semibold">Confirmar Contraseña</label>
-                  <input 
-                      type="password"
-                      placeholder="Confirma tu contraseña"
-                      className="border w-full p-3 mt-3 bg-white rounded-lg font-normal focus:outline-none focus:shadow-none"
-                      value={repetirPassword}
-                      onChange={ e => setRepetirPassword(e.target.value)}
-                  />
+              <div className="my-5 flex items-center">
+                  <div className="flex-grow">
+                    <label className="text-gray-600 block text-base font-semibold">Confirmar Contraseña</label>
+                      <input 
+                          type="password"
+                          placeholder="Confirma tu contraseña"
+                          className="border w-full p-3 mt-3 bg-white rounded-lg font-normal focus:outline-none focus:shadow-none"
+                          value={repetirPassword}
+                          onChange={ e => setRepetirPassword(e.target.value)}
+                      />
+                  </div>
+                  <div 
+                          className="cursor-pointer ml-2 mt-10" 
+                          onClick={() => setMostrarConfirmarPassword(!mostrarConfirmarPassword)}
+                      > {/* Ajustamos el margen izquierdo para separar el icono del input */}
+                          {mostrarConfirmarPassword ? (
+                          <i className="bx bxs-show bx-sm"></i>
+                          ) : (
+                          <i className="bx bxs-low-vision bx-sm"></i>
+                          )}
+                  </div>
               </div>
               <input 
                     type="submit"
