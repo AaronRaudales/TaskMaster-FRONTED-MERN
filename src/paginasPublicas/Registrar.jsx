@@ -77,7 +77,7 @@ const Registrar = () => {
                   <div className="flex-grow">
                     <label className="text-gray-600 block text-base font-semibold">Contraseña</label>
                       <input 
-                          type="password"
+                          type={mostrarPassword ? "text" : "password"}
                           placeholder="Contraseña"
                           className="border w-full p-3 mt-3 bg-white rounded-lg font-normal focus:outline-none focus:shadow-none"
                           value={password}
@@ -99,7 +99,7 @@ const Registrar = () => {
                   <div className="flex-grow">
                     <label className="text-gray-600 block text-base font-semibold">Confirmar Contraseña</label>
                       <input 
-                          type="password"
+                          type={mostrarConfirmarPassword ? "text" : "password"}
                           placeholder="Confirma tu contraseña"
                           className="border w-full p-3 mt-3 bg-white rounded-lg font-normal focus:outline-none focus:shadow-none"
                           value={repetirPassword}
